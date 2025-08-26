@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ironman;
   
-Route::resource("/Teacher", TeachersController::class);
-Route::resource("/Student", StudentController::class);
+Route::resource("/teachers", TeachersController::class);
+Route::resource("/students", StudentController::class);
 Route::get("/", [HomeController::class, 'index']);
 Route::get("/about", [HomeController::class, 'about']);
 Route::get("/dashboard", [DasboardController::class, 'index']);

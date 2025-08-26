@@ -33,8 +33,8 @@ font-size: 1rem; }
     type="date" name="tanggal_lahir"></div>
     <div class="form-group"><label>Gender:</label>
     <select name="gender">
-    <option value="Laki-laki">Laki-laki</option>
-    <option value="Perempuan">Perempuan</option>
+    <option value="L">Laki-laki</option>
+    <option value="P">Perempuan</option>
     </select>
     </div>
     <div class="form-group"><label>Alamat:</label><textarea

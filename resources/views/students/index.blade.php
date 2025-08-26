@@ -38,33 +38,33 @@ pointer; }
     Siswa Baru</a>
     @if(session('success'))
     <div style="background-color: #f0fff4; color: #38a169; padding:
-1rem; border-radius: 4px; margin-bottom: 1rem;">{{ session('success')
-}}</div>
-@endif
-<table>
-<thead>
-<tr><th>NIS</th><th>Nama</th><th>Email</th><th>Aksi</th></tr>
-</thead>
-<tbody>
-@foreach($students as $student)
-<tr>
-<td>{{ $student->nis }}</td>
-<td>{{ $student->nama }}</td>
-<td>{{ $student->email }}</td>
-<td>
-<a href="{{ url('students/' . $student->id .
-'/edit') }}" class="btn-edit">Edit</a>
-<form action="{{ url('students/' . $student->id)
-}}" method="POST" style="display:inline;">
-@csrf @method('DELETE')
-<button type="submit" class="btn-
-delete">Hapus</button>
-</form>
-</td>
-</tr>
-@endforeach
-</tbody>
-</table>
-</div>
+    1rem; border-radius: 4px; margin-bottom: 1rem;">{{ session('success')
+    }}</div>
+    @endif
+    <table>
+    <thead>
+    <tr><th>NIS</th><th>Nama</th><th>Email</th><th>Aksi</th></tr>
+    </thead>
+    <tbody>
+    @foreach($students as $student)
+    <tr>
+    <td>{{ $student->nis }}</td>
+    <td>{{ $student->nama }}</td>
+    <td>{{ $student->email }}</td>
+    <td>
+    <a href="{{ url('students/' . $student->id .
+    '/edit') }}" class="btn-edit">Edit</a>
+    <form action="{{ url('students/' . $student->id)
+    }}" method="POST" style="display:inline;">
+    @csrf @method('DELETE')
+    <button type="submit" class="btn-
+    delete">Hapus</button>
+    </form>
+    </td>
+    </tr>
+    @endforeach
+    </tbody>
+    </table>
+    </div>
 </body>
 </html>

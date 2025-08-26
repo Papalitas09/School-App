@@ -13,7 +13,8 @@
             <a href="/" class="bg-[#406E8E] rounded-xl p-2">Beranda</a> 
             <a href="/about" class="bg-[#406E8E] rounded-xl p-2">Tentang Kami</a> 
             <a href="/dashboard" class="bg-[#406E8E] rounded-xl p-2">Dashboard</a> 
-            <a href="/Teacher"  class="bg-[#406E8E] rounded-xl p-2">Guru</a>
+            <a href="/teachers"  class="bg-[#406E8E] rounded-xl p-2">Guru</a>
+            <a href="/students"  class="bg-[#406E8E] rounded-xl p-2">Murid</a>
         </nav>
     </header>
 <body >

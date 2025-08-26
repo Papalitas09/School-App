@@ -30,7 +30,7 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         Student::create($request->all());
-        return redirect('/students')->with('success', 'Data siswa berhasil
+        return redirect('students')->with('success', 'Data siswa berhasil
         ditambahkan!');
     }
 
