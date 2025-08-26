@@ -13,7 +13,7 @@
             <a href="/" class="bg-[#406E8E] rounded-xl p-2">Beranda</a> 
             <a href="/about" class="bg-[#406E8E] rounded-xl p-2">Tentang Kami</a> 
             <a href="/dashboard" class="bg-[#406E8E] rounded-xl p-2">Dashboard</a> 
-            <a href="/teacher" class="bg-[#406E8E] rounded-xl p-2">Guru</a>
+            <a href="/Teacher"  class="bg-[#406E8E] rounded-xl p-2">Guru</a>
         </nav>
     </header>
 <body >
@@ -21,7 +21,7 @@
         @yield('content') {{-- Ini adalah "lubang" untuk
         konten utama halaman --}}
     </main>
-    <footer class="w-screen h-20 flex justify-center items-center bg-[#161925]">
+    <footer class="w-screen h-20 flex justify-center items-center bg-[#161925] z-30">
         <p class="text-white">&copy; 2025 SMK PLUS PELITA NUSANTARA. Hak
         Cipta Dilindungi.</p>
     </footer>

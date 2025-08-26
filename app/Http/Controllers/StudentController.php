@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Teachers;
+use App\Models\Student;
 
-class TeachersController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $_teachers = Teachers::all();
-        return view('teachers.index',compact('_teachers'));
+        $students = Student::all();
+        return view('students.index', compact('students'));
     }
 
     /**
@@ -21,7 +21,7 @@ class TeachersController extends Controller
      */
     public function create()
     {
-        //
+        return view('students.create');
     }
 
     /**
@@ -29,7 +29,9 @@ class TeachersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Student::create($request->all());
+        return redirect('/students')->with('success', 'Data siswa berhasil
+        ditambahkan!');
     }
 
     /**
@@ -45,22 +47,26 @@ class TeachersController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('students.edit', compact('student'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Student $student)
     {
-        //
+        $student->update($request->all());
+        return redirect('/students')->with('success', 'Data siswa berhasil
+        diperbarui!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Student $student)
     {
-        //
+        $student->delete();
+        return redirect('/students')->with('success', 'Data siswa berhasil
+        dihapus!');
     }
 }
